@@ -16,6 +16,10 @@ export class LessonService {
     return this.lessonRepository.findOneBy({ id });
   }
 
+  getLessons() {
+    return this.lessonRepository.find();
+  }
+
   async createLesson(
     createLessonInput: CreateLessonInput,
   ): Promise<LessonEntity> {

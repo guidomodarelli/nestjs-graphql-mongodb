@@ -12,6 +12,11 @@ export class LessonResolver {
     return this.lessonService.getLesson(id);
   }
 
+  @Query((_returns) => [LessonType])
+  findAll() {
+    return this.lessonService.getLessons();
+  }
+
   @Mutation((_returns) => LessonType)
   createLesson(
     @Args('createLessonInput') createLessonInput: CreateLessonInput,
