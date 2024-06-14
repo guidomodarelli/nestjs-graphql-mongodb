@@ -13,7 +13,7 @@ export class LessonResolver {
   }
 
   @Query((_returns) => [LessonType])
-  findAll() {
+  lessons() {
     return this.lessonService.getLessons();
   }
 
