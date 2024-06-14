@@ -18,4 +18,9 @@ export class StudentResolver {
   students(): Promise<StudentType[]> {
     return this.studentService.getStudents();
   }
+
+  @Query((_returns) => StudentType)
+  student(@Args('id') id: string): Promise<StudentType> {
+    return this.studentService.getStudent(id);
+  }
 }

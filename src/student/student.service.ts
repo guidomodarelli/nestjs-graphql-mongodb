@@ -13,6 +13,10 @@ export class StudentService {
     private studentRepository: Repository<StudenEntity>,
   ) {}
 
+  getStudent(id: string): Promise<StudentType> {
+    return this.studentRepository.findOneBy({ id });
+  }
+
   getStudents(): Promise<StudentType[]> {
     return this.studentRepository.find();
   }
