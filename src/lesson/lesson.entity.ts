@@ -5,7 +5,9 @@ export class LessonEntity {
   @ObjectIdColumn()
   _id: string;
 
-  @PrimaryColumn()
+  @PrimaryColumn({
+    generated: 'uuid',
+  })
   id: string;
 
   @Column()
