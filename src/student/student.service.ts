@@ -13,6 +13,10 @@ export class StudentService {
     private studentRepository: Repository<StudenEntity>,
   ) {}
 
+  getStudents(): Promise<StudentType[]> {
+    return this.studentRepository.find();
+  }
+
   async createStudent(
     createStudentInput: CreateStudentInput,
   ): Promise<StudentType> {
