@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./docs/school-management-application.png" width="200" alt="School Management Application" />
+  <img src="./docs/school-management-application.png" alt="School Management Application" />
 </p>
 
 ## Description
